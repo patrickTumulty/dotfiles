@@ -35,12 +35,14 @@ set notimeout
 
 let mapleader = " "
 
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
 nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 
-nmap <leader>zm :action ToggleZenMode<CR>
+nmap <leader>zm :action ToggleDistractionFreeMode<CR>
 
 nmap <Leader>j :action PreviousTab<CR>
 nmap <Leader>k :action NextTab<CR>
@@ -52,13 +54,22 @@ map <leader>fc <action>(FindInPath)
 map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 
-" Refactoring
+
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
 map <leader>rv <Action>(IntroduceVariable)
-map <leader>rf <Action>(IntroduceField))
+map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+map <leader>t <Action>(ActivateTerminalToolWindow)
+
+map <leader>sv <Action>(SplitVertically)
+map <leader>sh <Action>(SplitHorizontally)
+map <leader>sf <Action>(EditSourceInNewWindow)
+map <leader>n <Action>(NextWindow)
+
+map <leader>c <Action>(CloseContent)
 
 vnoremap < <gv
 vnoremap > >gv
@@ -78,5 +89,3 @@ nmap gr <Action>(ShowUsages)
 
 nmap [[ <Action>(Back)
 nmap ]] <Action>(Forward)
-
-
