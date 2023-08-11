@@ -87,5 +87,11 @@ nmap gD <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gr <Action>(ShowUsages)
 
+Plug 'terryma/vim-multiple-cursors'
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+
+
 nmap [[ <Action>(Back)
 nmap ]] <Action>(Forward)
