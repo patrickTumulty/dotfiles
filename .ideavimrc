@@ -17,6 +17,9 @@ set relativenumber
 set showmatch
 set showmode
 set showcmd
+
+set ignorecase
+set smartcase
 set hlsearch
 set incsearch
 
@@ -54,7 +57,7 @@ map <leader>fc <action>(FindInPath)
 map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 
-
+map <leader>fm <Action>(ReformatCode)
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
 map <leader>rv <Action>(IntroduceVariable)
@@ -64,12 +67,16 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 map <leader>t <Action>(ActivateTerminalToolWindow)
 
+map <leader>bp <Action>(ToggleLineBreakpoint)
+map <leader>be <Action>(ToggleBreakpointEnabled)
+
 map <leader>sv <Action>(SplitVertically)
 map <leader>sh <Action>(SplitHorizontally)
 map <leader>sf <Action>(EditSourceInNewWindow)
 map <leader>n <Action>(NextWindow)
 
-map <leader>c <Action>(CloseContent)
+map <leader>cc <Action>(CloseContent)
+map <leader>ca :qa<CR>
 
 vnoremap < <gv
 vnoremap > >gv
@@ -87,11 +94,15 @@ nmap gD <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gr <Action>(ShowUsages)
 
+nmap [[ <Action>(Back)
+nmap ]] <Action>(Forward)
+
 Plug 'terryma/vim-multiple-cursors'
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
 
+Plug 'preservim/nerdtree'
 
-nmap [[ <Action>(Back)
-nmap ]] <Action>(Forward)
+map <leader>et :NERDTreeToggle<CR>
+map <leader>ef :NERDTreeFocus<CR>
