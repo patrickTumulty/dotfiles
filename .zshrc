@@ -13,11 +13,16 @@ compinit
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '[📁%F{blue}%r/%f %F{magenta}%b%f ]'
+
+# 
+#
+#
+#
+#
+zstyle ':vcs_info:git:*' formats '%F{magenta}%f%K{magenta}%F{black}%b %f%k%F{magenta}%f'
 
 setopt PROMPT_SUBST
 PROMPT='%F{green}%n%f [%F{blue}📁%~%f] 🚀 '
-# RPROMPT='%F{magenta}${vcs_info_msg_0_}%f [🕒%F{green}%t%f]'
 RPROMPT='${vcs_info_msg_0_}[🕒%F{green}%t%f]'
 
 alias vim=nvim
