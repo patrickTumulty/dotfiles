@@ -17,9 +17,6 @@ set relativenumber
 set showmatch
 set showmode
 set showcmd
-
-set ignorecase
-set smartcase
 set hlsearch
 set incsearch
 
@@ -50,6 +47,8 @@ nmap <leader>zm :action ToggleDistractionFreeMode<CR>
 nmap <Leader>j :action PreviousTab<CR>
 nmap <Leader>k :action NextTab<CR>
 
+nmap <leader>gb :action Annotate<CR>
+
 " File navigation
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
@@ -57,26 +56,24 @@ map <leader>fc <action>(FindInPath)
 map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 
-map <leader>fm <Action>(ReformatCode)
+
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
 map <leader>rv <Action>(IntroduceVariable)
-map <leader>rf <Action>(IntroduceField)
+map <leader>rcf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+map <leader>rf <Action>(ReformatCode)
+map <leader>rg <Action>(Generate)
 
 map <leader>t <Action>(ActivateTerminalToolWindow)
-
-map <leader>bp <Action>(ToggleLineBreakpoint)
-map <leader>be <Action>(ToggleBreakpointEnabled)
 
 map <leader>sv <Action>(SplitVertically)
 map <leader>sh <Action>(SplitHorizontally)
 map <leader>sf <Action>(EditSourceInNewWindow)
 map <leader>n <Action>(NextWindow)
 
-map <leader>cc <Action>(CloseContent)
-map <leader>ca :qa<CR>
+map <leader>c <Action>(CloseContent)
 
 vnoremap < <gv
 vnoremap > >gv
@@ -92,17 +89,13 @@ vmap K :m '<-2<CR>gv=gv
 nmap gd <Action>(GotoDeclaration)
 nmap gD <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
+nmap gI <Action>(GotoSuperMethod)
 nmap gr <Action>(ShowUsages)
 
-nmap [[ <Action>(Back)
-nmap ]] <Action>(Forward)
+nmap ][ <Action>(Back)
+nmap [] <Action>(Forward)
 
 Plug 'terryma/vim-multiple-cursors'
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
-
-Plug 'preservim/nerdtree'
-
-map <leader>et :NERDTreeToggle<CR>
-map <leader>ef :NERDTreeFocus<CR>
