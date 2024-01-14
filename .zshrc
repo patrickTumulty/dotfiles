@@ -26,7 +26,7 @@ PROMPT='%F{green}%n%f [%F{blue}📁%~%f] 🚀 '
 RPROMPT='${vcs_info_msg_0_}[🕒%F{green}%t%f]'
 
 alias vim=nvim
-export TERM=xterm-256color
+export TERM=screen-256color
 
 kitty-reload() {
     kill -SIGUSR1 $(pidof kitty)
