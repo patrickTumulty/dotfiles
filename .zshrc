@@ -11,6 +11,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q' # this is for the cursor shape
+
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
