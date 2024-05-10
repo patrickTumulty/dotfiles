@@ -33,3 +33,7 @@ export TERM=screen-256color
 kitty-reload() {
     kill -SIGUSR1 $(pidof kitty)
 }
+
+if [[ ! -z "$KITTY_WINDOW_ID" ]]; then 
+    alias ssh="kitty ssh"
+fi 
