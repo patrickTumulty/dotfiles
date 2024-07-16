@@ -27,6 +27,8 @@ setopt PROMPT_SUBST
 PROMPT='%F{green}%n%f [%F{blue}📁%~%f] 🚀 '
 RPROMPT='${vcs_info_msg_0_}[🕒%F{green}%t%f]'
 
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 alias vim=nvim
 export TERM=screen-256color
 
