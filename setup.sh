@@ -6,7 +6,10 @@ sudo apt-get install ripgrep
 sudo apt-get install fd-find
 sudo apt-get install npm
 sudo apt-get install gcc
-
+sudo apt-get install cmake
+sudo apt-get install python3
+sudo apt-get install python3-pip
+sudo apt-get install python3-venv
 
 # Install Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
